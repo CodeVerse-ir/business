@@ -14,6 +14,7 @@ import { Navigation, Autoplay } from 'swiper/modules';
 // Swiper css
 import 'swiper/swiper-bundle.css';
 import { useRef } from 'react';
+import Link from 'next/link';
 
 const pictures = [
     {
@@ -88,15 +89,17 @@ export default function SectionCarousel() {
                         {/* <!-- Slides --> */}
                         {pictures.map((picture, index) => {
                             return <SwiperSlide key={index}>
-                                <Image
-                                    className='w-full h-full'
-                                    src={picture.image}
-                                    width="100%"
-                                    height="100%"
-                                    alt={"ssd"}
-                                    loading='lazy'
-                                // loader={imageLoader}
-                                />
+                                <Link href={""} className='w-full h-full'>
+                                    <Image
+                                        className='w-full h-full'
+                                        src={picture.image}
+                                        width="100%"
+                                        height="100%"
+                                        alt={picture.title}
+                                        loading='lazy'
+                                    // loader={imageLoader}
+                                    />
+                                </Link>
                             </SwiperSlide>
                         })}
                     </Swiper >

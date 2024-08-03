@@ -6,6 +6,7 @@ import WebDesign from '/public/image/cart/Web-design.jpg';
 import foreignLanguages from '/public/image/cart/foreign-languages.jpg';
 
 import logo from '/public/image/logo/logo-img.webp';
+import Link from 'next/link';
 
 const teach = [
     {
@@ -39,8 +40,7 @@ export default function SectionTeach() {
                 </div>
 
                 <div className="flex flex-col md:flex-row items-center justify-center gap-x-5 lg:gap-x-10 gap-y-5 md:gap-y-0">
-                    <div
-                        className="relative group w-[60%] md:w-[30%] h-40 md:h-60 lg:h-80 overflow-hidden rounded-4xl shadow-lg cursor-pointer">
+                    <Link href={""} className="relative group w-[60%] md:w-[30%] h-40 md:h-60 lg:h-80 overflow-hidden rounded-4xl shadow-lg cursor-pointer">
                         <Image
                             className='w-full h-full'
                             src={teach[0].image}
@@ -64,10 +64,9 @@ export default function SectionTeach() {
                                 />
                             </div>
                         </div>
-                    </div>
-                    <div
-                        className="flex md:flex-col items-center justify-center w-full md:w-[30%] gap-y-5 lg:gap-y-10 gap-x-5 md:gap-x-0">
-                        <div className="relative group w-full h-40 md:h-60 overflow-hidden rounded-4xl shadow-lg cursor-pointer">
+                    </Link>
+                    <div className="flex md:flex-col items-center justify-center w-full md:w-[30%] gap-y-5 lg:gap-y-10 gap-x-5 md:gap-x-0">
+                        <Link href={""} className="relative group w-full h-40 md:h-60 overflow-hidden rounded-4xl shadow-lg cursor-pointer">
                             <Image
                                 className='w-full h-full'
                                 src={teach[1].image}
@@ -90,8 +89,8 @@ export default function SectionTeach() {
                                     />
                                 </div>
                             </div>
-                        </div>
-                        <div className="relative group w-full h-40 md:h-60 overflow-hidden rounded-4xl shadow-lg cursor-pointer">
+                        </Link>
+                        <Link href={""} className="relative group w-full h-40 md:h-60 overflow-hidden rounded-4xl shadow-lg cursor-pointer">
                             <Image
                                 className='w-full h-full'
                                 src={teach[2].image}
@@ -114,10 +113,9 @@ export default function SectionTeach() {
                                     />
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     </div>
-                    <div
-                        className="relative group w-[60%] md:w-[30%] h-40 md:h-60 lg:h-80 overflow-hidden rounded-4xl shadow-lg cursor-pointer">
+                    <Link href={""} className="relative group w-[60%] md:w-[30%] h-40 md:h-60 lg:h-80 overflow-hidden rounded-4xl shadow-lg cursor-pointer">
                         <Image
                             className='w-full h-full'
                             src={teach[3].image}
@@ -140,7 +138,7 @@ export default function SectionTeach() {
                                 />
                             </div>
                         </div>
-                    </div>
+                    </Link>
                 </div>
 
             </div>
