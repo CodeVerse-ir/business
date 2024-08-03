@@ -2,32 +2,146 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+
+  @font-face {
+    font-family: "Dana";
+    /* 400 */
+    src: local(DanaFaNum-Regular), url(/fonts/Dana/DanaFaNum-Regular.woff2) format(woff2);
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Dana Medium";
+    /* 500 */
+    src: local(DanaFaNum-Medium), url(/fonts/Dana/DanaFaNum-Medium.woff2) format(woff2);
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Dana DemiBold";
+    /* 600 */
+    src: local(DanaFaNum-DemiBold), url(/fonts/Dana/DanaFaNum-DemiBold.woff2) format(woff2);
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Morabba Light";
+    /* 400 */
+    src: local(Morabba-Light), url(/fonts/Morabba/Morabba-Light.woff2) format(woff2);
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Morabba Medium";
+    /* 500 */
+    src: local(Morabba-Medium), url(/fonts/Morabba/Morabba-Medium.woff2) format(woff2);
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Morabba Bold";
+    /* 600 */
+    src: local(Morabba-Bold), url(/fonts/Morabba/Morabba-Bold.woff2) format(woff2);
+    font-display: swap;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+@layer components {
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .overlay {
+    @apply invisible opacity-0 fixed lg:hidden inset-0 w-full h-full bg-black/40 transition-all;
+  }
+
+  .overlay--visible {
+    @apply visible opacity-100;
+  }
+
+  .submenu {
+    @apply hidden flex-col gap-y-3 pr-7 mt-3 text-sm text-zinc-600 dark:text-white;
+  }
+
+  .submenu--open {
+    @apply flex;
+  }
+
+  .submenu__item--active {
+    @apply relative text-orange-300 pr-2.5;
+  }
+
+  .submenu__item--active::after {
+    content: "";
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 100px;
+    background-color: #FDBA74;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  } 
+
+  .section-title {
+    @apply font-MorabbaMedium text-zinc-700 dark:text-white text-2xl/8 lg:text-5xl/[3rem];
+  }
+
+  .section-subtitle {
+    @apply font-MorabbaLight text-zinc-700 dark:text-white text-xl/8 lg:text-3xl/[3rem];
+  }
+
+  /* card-front & card-back */
+
+  .card-container {
+    perspective: 1000px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .card {
+    position: relative;
+    /* Change this to relative */
+    perspective: 1000px;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  .card.flipped {
+    transform: rotateY(180deg);
+  }
+
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+  }
+
+  .card-front {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-back {
+    background: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
 }
