@@ -10,7 +10,7 @@ import Image from 'next/image';
 
 // Swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Autoplay } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 // Swiper css
 import 'swiper/swiper-bundle.css';
 
@@ -64,19 +64,28 @@ export default function SectionCarousel() {
     };
 
     return (
-        <section className="mt-8 md:mt-20">
+        <section className="relative mt-8 md:mt-20 bg-teal-700 overflow-hidden">
+
+            {/* <div className='absolute -top-64 -left-80 w-[1000px] h-[700px] -rotate-45 bg-teal-800'></div> */}
+
             <div className="container">
 
-                <div className="h-[500px] flex items-center justify-center">
+                <div className="h-[500px] flex items-center justify-center z-10">
 
                     <div className="flex flex-col items-end justify-center w-[10%] h-full gap-y-10">
-                        <div className="w-[80%] h-10 md:h-14 lg:h-20 rounded-r-full bg-orange-300"></div>
-                        <div className="w-full h-10 md:h-14 lg:h-20 rounded-r-full bg-orange-200"></div>
+                        <div className="w-[80%] h-10 md:h-14 lg:h-20 rounded-r-full bg-orange-300 z-10"></div>
+                        <div className="w-full h-10 md:h-14 lg:h-20 rounded-r-full bg-orange-200 z-10"></div>
                     </div>
 
                     <Swiper
                         onSwiper={(swiper) => (swiperRef1.current = swiper)}
-                        modules={[Navigation, Autoplay]}
+                        modules={[Pagination, Autoplay]}
+                        style={{
+                            '--swiper-pagination-color': '#fb923c',
+                        }}
+                        pagination={{
+                            dynamicBullets: true,
+                        }}
                         autoplay={{
                             delay: 5000,
                             disableOnInteraction: false,
@@ -105,12 +114,12 @@ export default function SectionCarousel() {
                         })}
                     </Swiper >
 
-                    <div className="flex flex-col items-start justify-center w-[25%] md:w-[40%] gap-y-10">
+                    <div className="flex flex-col items-start justify-center w-[25%] md:w-[40%] gap-y-10 z-10">
                         <div className="w-full h-10 md:h-14 lg:h-20 rounded-l-full bg-orange-300">
 
                             <Swiper
                                 onSwiper={(swiper) => (swiperRef2.current = swiper)}
-                                modules={[Navigation, Autoplay]}
+                                modules={[Autoplay]}
                                 autoplay={{
                                     delay: 5000,
                                     disableOnInteraction: false,
@@ -137,7 +146,7 @@ export default function SectionCarousel() {
 
                             <Swiper
                                 onSwiper={(swiper) => (swiperRef3.current = swiper)}
-                                modules={[Navigation, Autoplay]}
+                                modules={[Autoplay]}
                                 autoplay={{
                                     delay: 5000,
                                     disableOnInteraction: false,

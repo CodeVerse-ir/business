@@ -1,8 +1,18 @@
+"use client";
+
 import logo from '/public/image/logo/logo-img.png'
 
 import Image from 'next/image';
 
 export default function Footer() {
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'  
+        });
+    };
+
     return (
         <footer className="relative min-h-80 px-5 py-10 m:px-10 md:px-5 lg:px-16 text-white bg-teal-700">
 
@@ -14,7 +24,7 @@ export default function Footer() {
 
             {/* <!-- Arrow Circle --> */}
             <div
-                className="absolute top-0 left-0 right-0 mx-auto -translate-y-2/4 hidden md:flex items-center justify-center w-[30px] h-[30px] border-2 border-orange-300 rounded-full">
+                className="absolute top-0 left-0 right-0 mx-auto -translate-y-2/4 hidden md:flex items-center justify-center w-[30px] h-[30px] border-2 border-orange-300 rounded-full cursor-pointer" onClick={scrollToTop}>
                 <svg className="w-5 h-5 text-zinc-700 dark:text-white rotate-180">
                     <use href="#chevron-down-mini"></use>
                 </svg>
@@ -24,19 +34,19 @@ export default function Footer() {
 
                 <div className="flex flex-col md:col-span-2 xl:col-span-1 gap-y-4">
 
-                        <Image className='w-48'
-                            src={logo}
-                            width={192}
-                            height={192}
-                            alt="University of Science and Culture"
-                            loading='lazy'
-                        // loader={imageLoader}
-                        />
+                    <Image className='w-48'
+                        src={logo}
+                        width={192}
+                        height={192}
+                        alt="University of Science and Culture"
+                        loading='lazy'
+                    // loader={imageLoader}
+                    />
 
-                        <p className="text-base lg:text-lg xl:pl-20">
-                            مرکز آموزش‌های تخصصی دانشگاه علم و فرهنگ زیر نظر بنیاد توسعه کسب و کار با دغدغه ایجاد اشتغال، کارآفرینی،
-                            ارتقای مهارت‌های منابع انسانی و با هدف تربیت نيروي انساني متخصص و مهارتی فعالیت می‌کند.
-                        </p>
+                    <p className="text-base lg:text-lg xl:pl-20">
+                        مرکز آموزش‌های تخصصی دانشگاه علم و فرهنگ زیر نظر بنیاد توسعه کسب و کار با دغدغه ایجاد اشتغال، کارآفرینی،
+                        ارتقای مهارت‌های منابع انسانی و با هدف تربیت نيروي انساني متخصص و مهارتی فعالیت می‌کند.
+                    </p>
 
                 </div>
 
@@ -117,7 +127,7 @@ export default function Footer() {
                 </p>
                 <p>
                     طراحی شده توسط
-                    <a className="hover:text-orange-300 transition-colors" href="https://codeverse.iapp.ir/">Code Verse</a>
+                    <a className="pr-1 hover:text-orange-300 transition-colors" href="https://codeverse.iapp.ir/">Code Verse</a>
                 </p>
             </div>
 

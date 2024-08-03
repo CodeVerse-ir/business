@@ -69,7 +69,7 @@ export default function SectionWorkingGroup() {
                 <div className="flex items-center justify-center px-5 md:px-0">
 
                     <div className="hidden md:flex swiper-button-prev-custom">
-                        <svg className="w-10 h-10 rotate-180 text-orange-300 hover:text-orange-400 transition-all cursor-pointer">
+                        <svg className="w-10 h-10 rotate-180 text-teal-500 hover:text-teal-700 transition-all cursor-pointer">
                             <use href="#chevron-left"></use>
                         </svg>
                     </div>
@@ -130,7 +130,7 @@ export default function SectionWorkingGroup() {
 
 
                     <div className="hidden md:flex swiper-button-next-custom">
-                        <svg className="w-10 h-10 text-orange-300 hover:text-orange-400 transition-all cursor-pointer">
+                        <svg className="w-10 h-10 text-teal-500 hover:text-teal-700 transition-all cursor-pointer">
                             <use href="#chevron-left"></use>
                         </svg>
                     </div>
