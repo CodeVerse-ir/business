@@ -4,8 +4,12 @@ const plugin = require('tailwindcss/plugin')
 
 module.exports = {
   darkMode: "class",
-  content: ["./public/*.{html,js}", "./src/js/*.{html,js}"],
-  theme: {
+  darkMode: "class",
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+  ], theme: {
     extend: {
       borderRadius: {
         "4xl": "2rem",
