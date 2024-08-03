@@ -1,3 +1,4 @@
+import SectionAbout from "@/pages/homePage/SectionAbout";
 import SectionCarousel from "@/pages/homePage/SectionCarousel";
 import SectionContents from "@/pages/homePage/SectionContents";
 import SectionCourses from "@/pages/homePage/SectionCourses";
@@ -12,6 +13,7 @@ export default function Home() {
       <SectionCarousel />
       <SectionContents />
       <SectionCourses />
+      <SectionAbout />
     </main>
   );
 }

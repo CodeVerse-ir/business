@@ -58,10 +58,10 @@ const courses = [
 
 export default function SectionCourses() {
 
-    const [flippedIndex, setFlippedIndex] = useState(null);  
+    const [flippedIndex, setFlippedIndex] = useState(null);
 
-    const handleFrontCart = (index) => {  
-        setFlippedIndex(prevIndex => (prevIndex === index ? null : index));  
+    const handleFrontCart = (index) => {
+        setFlippedIndex(prevIndex => (prevIndex === index ? null : index));
     };
 
     return (
@@ -111,22 +111,12 @@ export default function SectionCourses() {
                                     <div className="flex items-center justify-between p-4 md:p-5 mt-1.5 md:mt-2.5">
 
                                         {/* <!-- Star --> */}
-                                        <div className="flex text-yellow-400">
-                                            <svg className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-300 dark:text-gray-400">
-                                                <use href="#star-solid"></use>
-                                            </svg>
-                                            <svg className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-300 dark:text-gray-400">
-                                                <use href="#star-solid"></use>
-                                            </svg>
-                                            <svg className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6">
-                                                <use href="#star-solid"></use>
-                                            </svg>
-                                            <svg className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6">
-                                                <use href="#star-solid"></use>
-                                            </svg>
-                                            <svg className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6">
-                                                <use href="#star-solid"></use>
-                                            </svg>
+                                        <div className="flex text-gray-300 dark:text-gray-400">
+                                            {Array.from({ length: 5 }, (_, index) => (
+                                                <svg key={index} className={`mb-1 w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 ${index < course.star && "text-yellow-400"}`}>
+                                                    <use href="#star-solid"></use>
+                                                </svg>
+                                            ))}
                                         </div>
 
                                     </div>
@@ -205,7 +195,7 @@ export default function SectionCourses() {
                                             </div>
                                             <div className="text-teal-600 dark:text-emerald-500">
                                                 <span className="font-DanaBold text-base lg:text-xl">
-                                                    {course.price}
+                                                    {Number(course.price).toLocaleString()}
                                                 </span>
                                                 <span className="pr-0.5 text-xs md:text-sm tracking-tighter">
                                                     تومان
@@ -221,7 +211,7 @@ export default function SectionCourses() {
                                             </div>
                                             <div className="text-gray-400 line-through lg:text-base decoration-red-500 decoration-1">
                                                 <span className="font-DanaBold text-base lg:text-xl">
-                                                    {course.dicount}
+                                                    {Number(course.dicount).toLocaleString()}
                                                 </span>
                                                 <span className="pr-0.5 text-xs md:text-sm tracking-tighter">
                                                     تومان
