@@ -35,8 +35,8 @@ module.exports = {
         }
       },
       backgroundImage: {
-        "home-mobile": "url(../utils/image/background/business.jpg)",
-        "home-desktop": "url(../utils/image/background/business.jpg)",
+        "home-mobile": "url(/image/background/business.jpg)",
+        "home-desktop": "url(/image/background/business.jpg)",
       },
     },
     screens: {

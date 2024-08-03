@@ -1,28 +1,27 @@
 import Image from 'next/image';
-import logoWhite from '../public/image/logo/logo-white.png';
+import logo from '../public/image/logo/logo-white.png';
 
 export default function DesktopHeader() {
     return (
-        <header className="absolute top-0 right-0 left-0 z-50 hidden lg:flex items-center w-full h-25 px-5 lg:px-5 xl:px-10 py-5 mx-auto">
+        <header className="absolute top-0 right-0 left-0 z-50 hidden lg:flex items-center w-full h-25 px-5 lg:px-5 xl:px-7 py-5 mx-auto">
             <div className="flex items-center justify-between w-full ">
                 {/* <!-- Logo & Menu --> */}
-                <nav className="flex items-center gap-x-5 xl:gap-x-10">
+                <nav className="flex items-center gap-x-3 xl:gap-x-5">
 
                     {/* <!-- Logo --> */}
-                    <div className="w-10 h-10 xl:w-14 xl:h-14 shrink-0">
-                        <Image
-                            src={logoWhite}
-                            width={40}
-                            height={40}
-                            alt="University of Science and Culture"
-                            loading='lazy'
-                        // loader={imageLoader}
-                        />
-                    </div>
+                    <Image
+                        className='w-10 h-10 xl:w-14 xl:h-14 shrink-0'
+                        src={logo}
+                        width={40}
+                        height={40}
+                        alt="University of Science and Culture"
+                        loading='lazy'
+                    // loader={imageLoader}
+                    />
 
                     {/* <!-- Menu --> */}
                     <ul
-                        className="flex gap-x-5 lg:gap-x-5 xl:gap-x-9 h-full text-xl text-gray-300 tracking-tightest child:leading-[56px] child-hover:text-orange-300 child-hover:transition-colors">
+                        className="flex gap-x-5 xl:gap-x-7 h-full text-base xl:text-xl text-gray-300 tracking-tightest child:leading-[56px] child-hover:text-orange-300 child-hover:transition-colors">
                         <li className="text-orange-300">
                             <a href="">
                                 صفحه اصلی
@@ -96,7 +95,7 @@ export default function DesktopHeader() {
                 </nav>
 
                 {/* <!-- Cart & Toggle & Login Link --> */}
-                <div className="flex items-center gap-x-4 lg:gap-x-5 xl:gap-x-10 text-orange-100">
+                <div className="flex items-center gap-x-4 lg:gap-x-5 xl:gap-x-8 text-orange-100">
 
                     {/* <!-- shopping-cart --> */}
                     <div className="cursor-pointer hover:text-orange-300 transition-colors">
