@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import "./globals.css";
 import Svg from "@/components/Svg";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: " دانشگاه علم و فرهنگ",
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
         <Svg />
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

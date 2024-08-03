@@ -118,7 +118,7 @@ export default function SectionWorkingGroup() {
                                         src={item.image}
                                         width={270}
                                         height={270}
-                                        alt="University of Science and Culture"
+                                        alt={item.title}
                                         loading='lazy'
                                     // loader={imageLoader}
                                     />
