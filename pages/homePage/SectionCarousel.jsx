@@ -13,6 +13,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 // Swiper css
 import 'swiper/swiper-bundle.css';
+
 import { useRef } from 'react';
 import Link from 'next/link';
 

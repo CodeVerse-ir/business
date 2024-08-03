@@ -4,6 +4,7 @@ import SectionContents from "@/pages/homePage/SectionContents";
 import SectionCourses from "@/pages/homePage/SectionCourses";
 import SectionHome from "@/pages/homePage/SectionHome";
 import SectionTeach from "@/pages/homePage/SectionTeach";
+import SectionWorkingGroup from "@/pages/homePage/SectionWorkingGroup";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <SectionContents />
       <SectionCourses />
       <SectionAbout />
+      <SectionWorkingGroup />
     </main>
   );
 }
