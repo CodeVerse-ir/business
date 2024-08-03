@@ -113,7 +113,7 @@
     transform-style: preserve-3d;
   }
 
-  .card.flipped {
+  .flipped {
     transform: rotateY(180deg);
   }
 

@@ -1,3 +1,5 @@
+"use client";
+
 import teacher from '/public/image/cart/Teacher-training-course.png';
 import coloredPencil from '/public/image/cart/colored-pencil.png';
 import blackPen from '/public/image/cart/black-pen.png';
@@ -5,6 +7,7 @@ import accounting from '/public/image/cart/Accounting.jpg';
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 
 const courses = [
     {
@@ -54,6 +57,13 @@ const courses = [
 ]
 
 export default function SectionCourses() {
+
+    const [flippedIndex, setFlippedIndex] = useState(null);  
+
+    const handleFrontCart = (index) => {  
+        setFlippedIndex(prevIndex => (prevIndex === index ? null : index));  
+    };
+
     return (
         <section className="pt-8 md:pt-20">
             <div className="container">
@@ -69,8 +79,8 @@ export default function SectionCourses() {
                 <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-3.5 md:gap-5">
 
                     {courses.map((course, index) => {
-                        return <div key={index} className="card-container min-w-[157px] min-h-[350px] md:min-h-[416px] lg:min-w-[300px] lg:min-h-[440px]">
-                            <div className="card">
+                        return <div key={index} className="card-container min-w-[157px] min-h-[350px] md:min-h-[416px] lg:min-w-[300px] lg:min-h-[440px]" onClick={() => handleFrontCart(index)}>
+                            <div className={`card ${flippedIndex === index ? "flipped" : ""}`}>
                                 <div className="card-front flex flex-col justify-between bg-white dark:bg-zinc-700 shadow-normal rounded-3xl">
 
                                     <div className="w-full rounded-t-3xl overflow-hidden">
