@@ -51,7 +51,7 @@
 @layer components {
 
   .overlay {
-    @apply invisible opacity-0 fixed lg:hidden inset-0 w-full h-full bg-black/40 transition-all;
+    @apply invisible opacity-0 fixed lg:hidden inset-0 w-full h-full bg-black/60 transition-all z-10;
   }
 
   .overlay--visible {
@@ -59,37 +59,7 @@
   }
 
   .submenu {
-    @apply hidden flex-col gap-y-3 pr-7 mt-3 text-sm text-zinc-600 dark:text-white;
-  }
-
-  .submenu--open {
-    @apply flex;
-  }
-
-  .submenu__item--active {
-    @apply relative text-orange-300 pr-2.5;
-  }
-
-  .submenu__item--active::after {
-    content: "";
-    display: block;
-    width: 4px;
-    height: 4px;
-    border-radius: 100px;
-    background-color: #FDBA74;
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-  } 
-
-  .section-title {
-    @apply font-MorabbaMedium text-zinc-700 dark:text-white text-2xl/8 lg:text-5xl/[3rem];
-  }
-
-  .section-subtitle {
-    @apply font-MorabbaLight text-zinc-700 dark:text-white text-xl/8 lg:text-3xl/[3rem];
+    @apply flex-col gap-y-3 pr-4 mt-3 py-3 text-sm text-white bg-gradient-to-t from-teal-800 via-teal-700 to-teal-800 border-y border-orange-100;
   }
 
   /* card-front & card-back */

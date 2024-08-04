@@ -3,6 +3,7 @@
 import { useState } from "react";
 import DesktopHeader from "./DesktopHeader";
 import MobileHeader from "./MobileHeader";
+import DarkMode from "./ui/DarkMode";
 
 export default function Header() {
 
@@ -12,11 +13,14 @@ export default function Header() {
 
     return (
         <>
+            {/* Dark Mode ui */}
+            <DarkMode darkMode={darkMode} />
+
             {/* Header Desktop */}
-            <DesktopHeader darkMode={darkMode} handleDarkMode={handleDarkMode} />
+            <DesktopHeader handleDarkMode={handleDarkMode} />
 
             {/* Header Moble */}
-            <MobileHeader darkMode={darkMode} handleDarkMode={handleDarkMode} />
+            <MobileHeader handleDarkMode={handleDarkMode} />
         </>
     )
 }
