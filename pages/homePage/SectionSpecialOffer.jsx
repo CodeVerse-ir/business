@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function SectionSpecialOffer() {
     return (
-        <section className="pt-8 md:pt-20">
+        <section className="pt-10 md:pt-16 lg:pt-20">
             <div className="container">
 
                 <div className='flex flex-col items-center justify-center'>

@@ -64,7 +64,7 @@ export default function SectionCarousel() {
     };
 
     return (
-        <section className="relative mt-8 md:mt-20 bg-gradient-to-tr from-teal-900 to-teal-500 overflow-hidden">
+        <section className="relative mt-10 md:mt-16 lg:mt-20 bg-gradient-to-tr from-teal-900 to-teal-500 overflow-hidden">
 
             <div className="container">
 

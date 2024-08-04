@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function SectionAbout() {
     return (
-        <section className="mt-8 md:mt-20 bg-orange-300">
+        <section className="mt-10 md:mt-16 lg:mt-20 bg-orange-300">
             <div className="container">
 
                 <div

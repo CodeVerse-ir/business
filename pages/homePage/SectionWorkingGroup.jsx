@@ -56,11 +56,11 @@ const teach = [
 
 export default function SectionWorkingGroup() {
     return (
-        <section className="py-8 md:py-20">
+        <section className="py-10 md:py-16 lg:py-20">
             <div className="container">
 
                 {/* <!-- title --> */}
-                <div className="flex items-center justify-center pb-16">
+                <div className="flex items-center justify-center pb-5 md:pb-10 lg:pb-16">
                     <h4 className="font-MorabbaMedium text-2xl md:text-3xl lg:text-4xl text-black dark:text-white">
                         کارگروه های آموزشی
                     </h4>
@@ -138,7 +138,7 @@ export default function SectionWorkingGroup() {
                 </div>
 
                 {/* <!-- footer --> */}
-                <div className="flex items-center justify-center mt-16">
+                <div className="flex items-center justify-center mt-5 md:mt-10 lg:mt-16">
                     <a className="flex items-center justify-center w-36 h-8 md:w-48 md:h-10 text-sm md:text-base lg:text-lg bg-orange-400 text-white rounded-lg hover:bg-orange-500 transition-colors"
                         href="">
                         مشاهده همه آموزش ها

@@ -29,11 +29,11 @@ const teach = [
 
 export default function SectionTeach() {
     return (
-        <section className="pt-8 md:pt-20">
+        <section className="pt-10 md:pt-16 lg:pt-20">
             <div className="container">
 
                 {/* <!-- title --> */}
-                <div className="flex items-center justify-center pb-16">
+                <div className="flex items-center justify-center pb-5 md:pb-10 lg:pb-16">
                     <h4 className="font-MorabbaMedium text-2xl md:text-3xl lg:text-4xl text-black dark:text-white">
                         گروه های آموزشی
                     </h4>
