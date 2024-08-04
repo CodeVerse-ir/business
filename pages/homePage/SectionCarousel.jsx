@@ -64,9 +64,7 @@ export default function SectionCarousel() {
     };
 
     return (
-        <section className="relative mt-8 md:mt-20 bg-teal-700 overflow-hidden">
-
-            {/* <div className='absolute -top-64 -left-80 w-[1000px] h-[700px] -rotate-45 bg-teal-800'></div> */}
+        <section className="relative mt-8 md:mt-20 bg-gradient-to-tr from-teal-900 to-teal-500 overflow-hidden">
 
             <div className="container">
 
