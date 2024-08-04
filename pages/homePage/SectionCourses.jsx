@@ -209,11 +209,11 @@ export default function SectionCourses() {
                                             <div className="flex items-center justify-center">
                                                 تخفیف :
                                             </div>
-                                            <div className="text-gray-400 line-through lg:text-base decoration-red-500 decoration-1">
-                                                <span className="font-DanaBold text-base lg:text-xl">
+                                            <div className="text-gray-400 lg:text-base">
+                                                <span className="font-DanaBold text-base lg:text-xl line-through decoration-red-500 decoration-1">
                                                     {Number(course.dicount).toLocaleString()}
                                                 </span>
-                                                <span className="pr-0.5 text-xs md:text-sm tracking-tighter">
+                                                <span className="pr-0.5 text-xs md:text-sm">
                                                     تومان
                                                 </span>
                                             </div>
