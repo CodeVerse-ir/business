@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import logo from '../public/image/logo/logo-white.png';
 
-export default function DesktopHeader() {
+export default function DesktopHeader({ darkMode, handleDarkMode }) {
     return (
         <header className="absolute top-0 right-0 left-0 z-50 hidden lg:flex items-center w-full h-25 px-5 lg:px-5 xl:px-7 py-5 mx-auto">
             <div className="flex items-center justify-between w-full ">
@@ -115,7 +115,7 @@ export default function DesktopHeader() {
                     <span className="block w-px h-14 bg-white/20"></span>
 
                     {/* <!-- Theme Switch Btn --> */}
-                    <div className="toggle-theme cursor-pointer hover:text-orange-300 transition-colors">
+                    <div className="cursor-pointer hover:text-orange-300 transition-colors" onClick={handleDarkMode}>
                         <svg className="inline-block dark:hidden w-7 h-7 xl:w-8 xl:h-8">
                             <use href="#moon"></use>
                         </svg>
