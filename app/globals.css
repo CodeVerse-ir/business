@@ -51,11 +51,7 @@
 @layer components {
 
   .overlay {
-    @apply invisible opacity-0 fixed lg:hidden inset-0 w-full h-full bg-black/60 transition-all z-10;
-  }
-
-  .overlay--visible {
-    @apply visible opacity-100;
+    @apply fixed lg:hidden inset-0 w-full h-full bg-black/60 transition-all z-10;
   }
 
   .submenu {

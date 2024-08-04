@@ -40,7 +40,7 @@ export default function SectionTeach() {
                 </div>
 
                 <div className="flex flex-col md:flex-row items-center justify-center gap-x-5 lg:gap-x-10 gap-y-5 md:gap-y-0">
-                    <Link href={""} className="relative group w-[60%] md:w-[30%] h-40 md:h-60 lg:h-80 overflow-hidden rounded-4xl shadow-lg cursor-pointer">
+                    <Link href={""} className="relative group w-[60%] md:w-[30%] h-40 md:h-60 lg:h-80 overflow-hidden rounded-2xl shadow-lg cursor-pointer">
                         <Image
                             className='w-full h-full'
                             src={teach[0].image}
@@ -51,7 +51,7 @@ export default function SectionTeach() {
                         // loader={imageLoader}
                         />
                         <div
-                            className="absolute inset-0 flex items-center justify-center transition-all duration-300 opacity-0 bg-gradient-to-bl from-teal-600/95 to-orange-300/95 group-hover:opacity-100 rounded-2xl rounded-bl-4xl">
+                            className="absolute inset-0 flex items-center justify-center transition-all duration-300 opacity-0 bg-gradient-to-bl from-teal-600/95 to-orange-300/95 group-hover:opacity-100 rounded-2xl">
                             <div className="flex items-center justify-center px-3 md:px-0">
                                 <Image
                                     className='w-20 md:w-36 mx-auto'
@@ -66,7 +66,7 @@ export default function SectionTeach() {
                         </div>
                     </Link>
                     <div className="flex md:flex-col items-center justify-center w-full md:w-[30%] gap-y-5 lg:gap-y-10 gap-x-5 md:gap-x-0">
-                        <Link href={""} className="relative group w-full h-40 md:h-60 overflow-hidden rounded-4xl shadow-lg cursor-pointer">
+                        <Link href={""} className="relative group w-full h-40 md:h-60 overflow-hidden rounded-2xl shadow-lg cursor-pointer">
                             <Image
                                 className='w-full h-full'
                                 src={teach[1].image}
@@ -76,7 +76,7 @@ export default function SectionTeach() {
                                 loading='lazy'
                             // loader={imageLoader}
                             />                                <div
-                                className="absolute inset-0 flex items-center justify-center transition-all duration-300 opacity-0 bg-gradient-to-bl from-teal-600/95 to-orange-300/95 group-hover:opacity-100 rounded-2xl rounded-bl-4xl">
+                                className="absolute inset-0 flex items-center justify-center transition-all duration-300 opacity-0 bg-gradient-to-bl from-teal-600/95 to-orange-300/95 group-hover:opacity-100 rounded-2xl">
                                 <div className="flex items-center justify-center px-3 md:px-0">
                                     <Image
                                         className='w-20 md:w-36 mx-auto'
@@ -90,7 +90,7 @@ export default function SectionTeach() {
                                 </div>
                             </div>
                         </Link>
-                        <Link href={""} className="relative group w-full h-40 md:h-60 overflow-hidden rounded-4xl shadow-lg cursor-pointer">
+                        <Link href={""} className="relative group w-full h-40 md:h-60 overflow-hidden rounded-2xl shadow-lg cursor-pointer">
                             <Image
                                 className='w-full h-full'
                                 src={teach[2].image}
@@ -100,7 +100,7 @@ export default function SectionTeach() {
                                 loading='lazy'
                             // loader={imageLoader}
                             />                                <div
-                                className="absolute inset-0 flex items-center justify-center transition-all duration-300 opacity-0 bg-gradient-to-bl from-teal-600/95 to-orange-300/95 group-hover:opacity-100 rounded-2xl rounded-bl-4xl">
+                                className="absolute inset-0 flex items-center justify-center transition-all duration-300 opacity-0 bg-gradient-to-bl from-teal-600/95 to-orange-300/95 group-hover:opacity-100 rounded-2xl">
                                 <div className="flex items-center justify-center px-3 md:px-0">
                                     <Image
                                         className='w-20 md:w-36 mx-auto'
@@ -115,7 +115,7 @@ export default function SectionTeach() {
                             </div>
                         </Link>
                     </div>
-                    <Link href={""} className="relative group w-[60%] md:w-[30%] h-40 md:h-60 lg:h-80 overflow-hidden rounded-4xl shadow-lg cursor-pointer">
+                    <Link href={""} className="relative group w-[60%] md:w-[30%] h-40 md:h-60 lg:h-80 overflow-hidden rounded-2xl shadow-lg cursor-pointer">
                         <Image
                             className='w-full h-full'
                             src={teach[3].image}
@@ -125,7 +125,7 @@ export default function SectionTeach() {
                             loading='lazy'
                         />
                         <div
-                            className="absolute inset-0 flex items-center justify-center transition-all duration-300 opacity-0 bg-gradient-to-bl from-teal-600/95 to-orange-300/95 group-hover:opacity-100 rounded-2xl rounded-bl-4xl">
+                            className="absolute inset-0 flex items-center justify-center transition-all duration-300 opacity-0 bg-gradient-to-bl from-teal-600/95 to-orange-300/95 group-hover:opacity-100 rounded-2xl">
                             <div className="flex items-center justify-center px-3 md:px-0">
                                 <Image
                                     className='w-20 md:w-36 mx-auto'

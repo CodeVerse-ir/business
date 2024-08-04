@@ -68,11 +68,11 @@ export default function SectionCarousel() {
 
             <div className="container">
 
-                <div className="h-[500px] flex items-center justify-center z-10">
+                <div className="h-[300px] md:h-[400px] lg:h-[500px] flex items-center justify-center z-10">
 
                     <div className="flex flex-col items-end justify-center w-[10%] h-full gap-y-10">
                         <div className="w-[80%] h-10 md:h-14 lg:h-20 rounded-r-full bg-orange-300 z-10"></div>
-                        <div className="w-full h-10 md:h-14 lg:h-20 rounded-r-full bg-orange-200 z-10"></div>
+                        <div className="w-full h-16 md:h-20 lg:h-30 rounded-r-full bg-orange-200 z-10"></div>
                     </div>
 
                     <Swiper
@@ -91,7 +91,7 @@ export default function SectionCarousel() {
                         rewind={true}
                         slidesPerView={1}
                         onSlideChange={handleSlideChange}
-                        className="w-[90%] h-[50%] md:w-[80%] md:h-[60%] lg:w-[60%] lg:h-[80%] rounded-4xl overflow-hidden"
+                        className="w-[90%] h-[80%] sm:w-[60%] md:w-[80%] md:h-[80%] lg:w-[60%] lg:h-[80%] rounded-4xl overflow-hidden"
                     >
 
                         {/* <!-- Slides --> */}
@@ -112,7 +112,7 @@ export default function SectionCarousel() {
                         })}
                     </Swiper >
 
-                    <div className="flex flex-col items-start justify-center w-[25%] md:w-[40%] gap-y-10 z-10">
+                    <div className="flex flex-col items-start justify-center w-[25%] sm:w-[30%] md:w-[40%] gap-y-10 z-10">
                         <div className="w-full h-10 md:h-14 lg:h-20 rounded-l-full bg-orange-300">
 
                             <Swiper
