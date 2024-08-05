@@ -11,9 +11,9 @@ export default function Home() {
   return (
     <main className="">
       <SectionHome />
-      <SectionTeach />
-      <SectionCarousel />
       <SectionContents />
+      <SectionCarousel />
+      <SectionTeach />
       <SectionSpecialOffer />
       <SectionCourses />
       <SectionAbout />
